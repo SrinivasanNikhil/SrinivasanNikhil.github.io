@@ -625,7 +625,7 @@ progress {
 	color: #6c757d;
 }
 .blockquote-footer::before {
-	content: "— ";
+	content: "— ";
 }
 
 .img-fluid {
@@ -11687,43 +11687,60 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 	padding: 2rem;
 }
 
-section#teaching {
+/* Common section styles for teaching, interests, and other-information */
+section#teaching,
+section#interests,
+section#other-information {
 	max-width: 1000px;
 	margin: 0 auto;
 }
 
-section#teaching h2 {
+section#teaching h2,
+section#interests h2,
+section#other-information h2 {
 	margin-bottom: 2rem;
 	color: #002868; /* UGA blue */
 }
 
-section#teaching h3 {
+section#teaching h3,
+section#interests h3,
+section#other-information h3 {
 	margin-top: 2.5rem;
 	margin-bottom: 1.5rem;
 	padding-bottom: 0.5rem;
 	border-bottom: 2px solid #ba0c2f; /* UGA red */
 }
 
-section#teaching h4 {
+section#teaching h4,
+section#interests h4,
+section#other-information h4 {
 	margin-top: 1.5rem;
 	margin-bottom: 1rem;
 }
 
-section#teaching p {
+section#teaching p,
+section#interests p,
+section#other-information p {
 	line-height: 1.8;
 	margin-bottom: 2rem;
 }
 
-section#teaching ul {
+section#teaching ul,
+section#interests ul,
+section#other-information ul {
 	margin-bottom: 2rem;
 }
 
-section#teaching li {
+section#teaching li,
+section#interests li,
+section#other-information li {
 	margin-bottom: 1rem;
 	line-height: 1.6;
 }
 
 /* Add some spacing between list items */
-section#teaching ul li:last-child {
+section#teaching ul li:last-child,
+section#interests ul li:last-child,
+section#other-information ul li:last-child {
 	margin-bottom: 0;
 }
