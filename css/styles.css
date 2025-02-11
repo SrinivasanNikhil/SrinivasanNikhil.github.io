@@ -11688,6 +11688,7 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 }
 
 /* Common section styles for teaching, interests, and other-information */
+section#home,
 section#teaching,
 section#interests,
 section#other-information {
@@ -11695,6 +11696,7 @@ section#other-information {
 	margin: 0 auto;
 }
 
+section#home h2,
 section#teaching h2,
 section#interests h2,
 section#other-information h2 {
@@ -11702,6 +11704,7 @@ section#other-information h2 {
 	color: #002868; /* UGA blue */
 }
 
+section#home h3,
 section#teaching h3,
 section#interests h3,
 section#other-information h3 {
@@ -11711,6 +11714,7 @@ section#other-information h3 {
 	border-bottom: 2px solid #ba0c2f; /* UGA red */
 }
 
+section#home h4,
 section#teaching h4,
 section#interests h4,
 section#other-information h4 {
@@ -11718,6 +11722,7 @@ section#other-information h4 {
 	margin-bottom: 1rem;
 }
 
+section#home p,
 section#teaching p,
 section#interests p,
 section#other-information p {
@@ -11725,10 +11730,40 @@ section#other-information p {
 	margin-bottom: 2rem;
 }
 
+section#home ul,
 section#teaching ul,
 section#interests ul,
 section#other-information ul {
 	margin-bottom: 2rem;
+}
+
+/* Add specific styles for the home page */
+section#home p {
+	line-height: 1.8;
+	margin-bottom: 2rem;
+}
+
+section#home ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+section#home li {
+	margin-bottom: 1.5rem;
+}
+
+section#home a {
+	color: #002868;
+	text-decoration: none;
+}
+
+section#home a:hover {
+	text-decoration: underline;
+}
+
+/* LinkedIn badge container */
+section#home .badge-base {
+	margin-top: 1rem;
 }
 
 section#teaching li,
