@@ -1,106 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Nikhil Srinivasan - Lecturer - UGA</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <script> window.risposeWidgetId = "q91pmakq9c9w" </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Srinivasan | Senior Lecturer - Data, Analytics & AI</title>
+    <meta name="description" content="Award-winning Senior Lecturer at UGA Terry College of Business. Teaching data management, analytics, and programming. PhD in Information Systems.">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uga-red': '#BA0C2F',
+                        'uga-black': '#000000',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Rispose Widget -->
+    <script>window.risposeWidgetId = "q91pmakq9c9w"</script>
     <script defer src="https://rispose.com/cdn/script.js"></script>
-    <!-- Google tag (gtag.js) -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GQC7VFLY5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-0GQC7VFLY5');
     </script>
 </head>
+<body class="bg-zinc-50 text-zinc-900 antialiased">
 
-<body>
-    <div class="d-flex" id="wrapper">
-        <!-- Sidebar-->
-        <div class="border-end bg-white" id="sidebar-wrapper">
-            <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="index.html">Home</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
-                    href="teaching.html">Teaching</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
-                    href="interests.html">Interests</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="otherinfo.html">Other
-                    Information</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" target="blank"
-                    href="http://www.linkedin.com/in/nikhil-srinivasan">LinkedIn</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" target="blank"
-                    href="https://elasticbeanstalk-us-east-1-712866102994.s3.amazonaws.com/sqltext/data-management-databases-and-organizations.html">Intro
-                    to SQL Text</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
-                    href="https://github.com/SrinivasanNikhil" target="blank">Github</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
-                    href="https://comparator.nsrinivasan.com" target="blank">SQL Comparator App</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
-                    href="https://youtube.com/@nikhilsrinivasan?si=v5dGbVIqgSpZ-VcL" target="blank">Youtube Channel</a>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="font-bold text-xl text-zinc-900">NS</a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors">About</a>
+                    <a href="teaching.html" class="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors">Teaching</a>
+                    <a href="research.html" class="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors">Research</a>
+                    <a href="#contact" class="text-sm font-medium bg-zinc-900 text-white px-4 py-2 rounded-full hover:bg-zinc-700 transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-zinc-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
             </div>
         </div>
-        <!-- Page content wrapper-->
-        <div id="page-content-wrapper">
-            <!-- Page content-->
-            <div class="container-fluid">
-                <section id="home">
-                    <h2>Dr. Nikhil Srinivasan</h2>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-zinc-200 px-4 py-4">
+            <div class="flex flex-col gap-4">
+                <a href="#about" class="text-sm font-medium text-zinc-600">About</a>
+                <a href="teaching.html" class="text-sm font-medium text-zinc-600">Teaching</a>
+                <a href="research.html" class="text-sm font-medium text-zinc-600">Research</a>
+                <a href="#contact" class="text-sm font-medium text-zinc-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-uga-red/10 text-uga-red rounded-full text-sm font-medium mb-6">
+                    <span class="w-2 h-2 bg-uga-red rounded-full animate-pulse"></span>
+                    Senior Lecturer @ UGA Terry College of Business
+                </div>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                    Nikhil Srinivasan
+                </h1>
+                <p class="text-xl sm:text-2xl text-zinc-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+                    I help students master <span class="text-zinc-900 font-semibold">data, analytics, and programming</span> to build real-world business solutions.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#about" class="inline-flex items-center gap-2 bg-zinc-900 text-white px-6 py-3 rounded-full font-medium hover:bg-zinc-700 transition-colors">
+                        Learn more
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nikhil-srinivasan" target="_blank" class="inline-flex items-center gap-2 bg-white border border-zinc-300 text-zinc-700 px-6 py-3 rounded-full font-medium hover:bg-zinc-50 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <section class="bg-zinc-900 text-white py-12 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div>
-                        <p>
-                            I am a lecturer at the <b><a
-                                    href="https://www.terry.uga.edu/academics/offices/management-information-systems">Management
-                                    Information Systems (MIS)</a></b> department at
-                            the <a href="https://www.terry.uga.edu/">Terry College of Business</a> at the <a
-                                href="https://www.uga.edu">University of Georgia</a>. I teach courses at the
-                            undergraduate
-                            and graduate level ranging from <i>computer programming in Java to data analytics and
-                                visualization and cyber security</i>. I also teach
-                            online Masters courses with a focus on Database Management and web based client-side
-                            development
-                            using Javascript and React. I also serve as a supervisor and faculty mentor to graduate
-                            projects
-                            in the Masters of Business Analytics and Masters of Business and Technology program.
-                        </p>
+                        <div class="text-4xl sm:text-5xl font-bold text-white mb-2">12+</div>
+                        <div class="text-zinc-400 text-sm">Years at UGA</div>
                     </div>
-
-                    <h3>Education</h3>
-                    <ul>
-                        <li><strong>PhD in Information Systems</strong><br>
-                            <i>Weatherhead School of Management, Case Western Reserve University, USA - 2013</i>
-                        </li>
-                        <li><strong>MS, Telecommunications and Network Management</strong><br>
-                            <i>School of Information Studies, Syracuse University, USA - 2001</i>
-                        </li>
-                        <li><strong>BE, Electronics and Telecommunications</strong><br>
-                            <i>Jawaharlal Nehru Engg College, Marathwada University, India - 1999</i>
-                        </li>
-                    </ul>
-
-                    <h3>Connect</h3>
-                    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light"
-                        data-type="HORIZONTAL" data-vanity="nikhil-srinivasan" data-version="v1">
-                        <a class="badge-base__link LI-simple-link"
-                            href="https://www.linkedin.com/in/nikhil-srinivasan?trk=profile-badge"></a>
+                    <div>
+                        <div class="text-4xl sm:text-5xl font-bold text-white mb-2">10+</div>
+                        <div class="text-zinc-400 text-sm">Courses Taught</div>
                     </div>
-                </section>
+                    <div>
+                        <div class="text-4xl sm:text-5xl font-bold text-white mb-2">5</div>
+                        <div class="text-zinc-400 text-sm">Teaching Awards</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl sm:text-5xl font-bold text-white mb-2">3</div>
+                        <div class="text-zinc-400 text-sm">Innovation Grants</div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-</body>
+        </section>
 
+        <!-- Bento Grid Section -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">What I Do</h2>
+                    <p class="text-zinc-600 max-w-2xl mx-auto">Bridging the gap between theory and practice in data management, analytics, and modern software development.</p>
+                </div>
+
+                <!-- Bento Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                    <!-- Large Card: Teaching Focus -->
+                    <div class="md:col-span-2 bg-gradient-to-br from-uga-red to-red-700 rounded-3xl p-8 text-white group hover:scale-[1.02] transition-transform">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="p-3 bg-white/20 rounded-2xl">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <a href="teaching.html" class="text-white/80 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Teaching Excellence</h3>
+                        <p class="text-white/80 mb-6">From SQL fundamentals to advanced data analytics, I design courses that prepare students for real business challenges.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-sm">SQL & Databases</span>
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Python & R</span>
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Data Analytics</span>
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Cloud (AWS)</span>
+                        </div>
+                    </div>
+
+                    <!-- Award Card -->
+                    <div class="bg-gradient-to-br from-amber-400 to-orange-500 rounded-3xl p-8 text-white hover:scale-[1.02] transition-transform">
+                        <div class="p-3 bg-white/20 rounded-2xl w-fit mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Hugh O. Nourse MBA Teaching Award</h3>
+                        <p class="text-white/80">2024</p>
+                    </div>
+
+                    <!-- Skills Card -->
+                    <div class="bg-zinc-900 rounded-3xl p-8 text-white hover:scale-[1.02] transition-transform">
+                        <div class="p-3 bg-white/10 rounded-2xl w-fit mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Technical Stack</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                                <span class="text-zinc-300">Python, R, JavaScript</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <span class="text-zinc-300">React, Node.js</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                <span class="text-zinc-300">MySQL, SQL Server</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
+                                <span class="text-zinc-300">AWS, Tableau</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certification Card -->
+                    <div class="bg-gradient-to-br from-sky-500 to-blue-600 rounded-3xl p-8 text-white hover:scale-[1.02] transition-transform">
+                        <div class="p-3 bg-white/20 rounded-2xl w-fit mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">AWS Certified</h3>
+                        <p class="text-white/80">Cloud Practitioner</p>
+                    </div>
+
+                    <!-- Research Card -->
+                    <div class="bg-white border border-zinc-200 rounded-3xl p-8 hover:scale-[1.02] transition-transform hover:shadow-lg">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="p-3 bg-zinc-100 rounded-2xl">
+                                <svg class="w-8 h-8 text-zinc-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                            </div>
+                            <a href="research.html" class="text-zinc-400 hover:text-zinc-900 transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Research Focus</h3>
+                        <ul class="space-y-2 text-zinc-600">
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-zinc-400 rounded-full"></span>
+                                Social Network Analysis
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-zinc-400 rounded-full"></span>
+                                Big Data Analytics
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-zinc-400 rounded-full"></span>
+                                Information Systems Design
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Education</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-6 border border-zinc-200 rounded-2xl hover:border-zinc-400 transition-colors">
+                        <div class="text-sm text-uga-red font-medium mb-2">2013</div>
+                        <h3 class="font-bold text-lg mb-1">PhD, Information Systems</h3>
+                        <p class="text-zinc-600">Case Western Reserve University</p>
+                        <p class="text-zinc-500 text-sm mt-2">Weatherhead School of Management</p>
+                    </div>
+                    <div class="p-6 border border-zinc-200 rounded-2xl hover:border-zinc-400 transition-colors">
+                        <div class="text-sm text-uga-red font-medium mb-2">2001</div>
+                        <h3 class="font-bold text-lg mb-1">MS, Telecom & Network Mgmt</h3>
+                        <p class="text-zinc-600">Syracuse University</p>
+                        <p class="text-zinc-500 text-sm mt-2">School of Information Studies</p>
+                    </div>
+                    <div class="p-6 border border-zinc-200 rounded-2xl hover:border-zinc-400 transition-colors">
+                        <div class="text-sm text-uga-red font-medium mb-2">1999</div>
+                        <h3 class="font-bold text-lg mb-1">BE, Electronics & Telecom</h3>
+                        <p class="text-zinc-600">Marathwada University, India</p>
+                        <p class="text-zinc-500 text-sm mt-2">JNEC</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Marquee -->
+        <section class="py-12 bg-zinc-100 overflow-hidden">
+            <div class="flex items-center gap-8 animate-marquee whitespace-nowrap">
+                <span class="flex items-center gap-2 text-zinc-600">
+                    <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    Hugh O. Nourse MBA Teaching Award 2024
+                </span>
+                <span class="text-zinc-300">|</span>
+                <span class="flex items-center gap-2 text-zinc-600">
+                    <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    Outstanding Teacher Award 2018
+                </span>
+                <span class="text-zinc-300">|</span>
+                <span class="flex items-center gap-2 text-zinc-600">
+                    <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    Career Success Influencer 2022-2024
+                </span>
+                <span class="text-zinc-300">|</span>
+                <span class="flex items-center gap-2 text-zinc-600">
+                    <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    Teaching Academy Fellow
+                </span>
+                <span class="text-zinc-300">|</span>
+                <span class="flex items-center gap-2 text-zinc-600">
+                    <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    Hugh O. Nourse MBA Teaching Award 2024
+                </span>
+                <span class="text-zinc-300">|</span>
+                <span class="flex items-center gap-2 text-zinc-600">
+                    <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    Outstanding Teacher Award 2018
+                </span>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Resources & Projects</h2>
+                    <p class="text-zinc-600">Tools and content I've built for students and the community.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="https://comparator.nsrinivasan.com" target="_blank" class="group p-6 bg-white border border-zinc-200 rounded-2xl hover:border-zinc-400 hover:shadow-lg transition-all">
+                        <div class="p-3 bg-emerald-100 rounded-xl w-fit mb-4">
+                            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold mb-2 group-hover:text-uga-red transition-colors">SQL Comparator</h3>
+                        <p class="text-zinc-600 text-sm">Compare SQL queries side-by-side for teaching and learning.</p>
+                    </a>
+                    <a href="https://elasticbeanstalk-us-east-1-712866102994.s3.amazonaws.com/sqltext/data-management-databases-and-organizations.html" target="_blank" class="group p-6 bg-white border border-zinc-200 rounded-2xl hover:border-zinc-400 hover:shadow-lg transition-all">
+                        <div class="p-3 bg-blue-100 rounded-xl w-fit mb-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold mb-2 group-hover:text-uga-red transition-colors">Intro to SQL</h3>
+                        <p class="text-zinc-600 text-sm">Free online textbook for SQL fundamentals.</p>
+                    </a>
+                    <a href="https://youtube.com/@nikhilsrinivasan" target="_blank" class="group p-6 bg-white border border-zinc-200 rounded-2xl hover:border-zinc-400 hover:shadow-lg transition-all">
+                        <div class="p-3 bg-red-100 rounded-xl w-fit mb-4">
+                            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold mb-2 group-hover:text-uga-red transition-colors">YouTube</h3>
+                        <p class="text-zinc-600 text-sm">Video tutorials on data and programming.</p>
+                    </a>
+                    <a href="https://github.com/SrinivasanNikhil" target="_blank" class="group p-6 bg-white border border-zinc-200 rounded-2xl hover:border-zinc-400 hover:shadow-lg transition-all">
+                        <div class="p-3 bg-zinc-100 rounded-xl w-fit mb-4">
+                            <svg class="w-6 h-6 text-zinc-700" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold mb-2 group-hover:text-uga-red transition-colors">GitHub</h3>
+                        <p class="text-zinc-600 text-sm">Code samples and course materials.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-900 text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get in Touch</h2>
+                <p class="text-zinc-400 mb-8 max-w-xl mx-auto">Have questions about courses, research collaboration, or just want to connect? I'd love to hear from you.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="mailto:nsrini@uga.edu" class="inline-flex items-center gap-2 bg-white text-zinc-900 px-6 py-3 rounded-full font-medium hover:bg-zinc-200 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        nsrini@uga.edu
+                    </a>
+                    <a href="https://www.linkedin.com/in/nikhil-srinivasan" target="_blank" class="inline-flex items-center gap-2 bg-zinc-800 text-white px-6 py-3 rounded-full font-medium hover:bg-zinc-700 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+                <p class="mt-12 text-zinc-500 text-sm">
+                    University of Georgia · Terry College of Business · MIS Department
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-4 bg-zinc-950 text-zinc-500 text-center text-sm">
+        <p>&copy; 2025 Nikhil Srinivasan. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile menu script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Close mobile menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
 </html>

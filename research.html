@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Nikhil Srinivasan</title>
+    <meta name="description" content="Research publications and interests of Dr. Nikhil Srinivasan - Social Network Analysis, Big Data Analytics, Information Systems.">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uga-red': '#BA0C2F',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GQC7VFLY5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0GQC7VFLY5');
+    </script>
+</head>
+<body class="bg-zinc-50 text-zinc-900 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="font-bold text-xl text-zinc-900">NS</a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors">Home</a>
+                    <a href="teaching.html" class="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors">Teaching</a>
+                    <a href="research.html" class="text-sm font-medium text-zinc-900 border-b-2 border-uga-red pb-0.5">Research</a>
+                    <a href="index.html#contact" class="text-sm font-medium bg-zinc-900 text-white px-4 py-2 rounded-full hover:bg-zinc-700 transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-zinc-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-zinc-200 px-4 py-4">
+            <div class="flex flex-col gap-4">
+                <a href="index.html" class="text-sm font-medium text-zinc-600">Home</a>
+                <a href="teaching.html" class="text-sm font-medium text-zinc-600">Teaching</a>
+                <a href="research.html" class="text-sm font-medium text-uga-red">Research</a>
+                <a href="index.html#contact" class="text-sm font-medium text-zinc-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-900 to-purple-900 text-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm font-medium mb-6">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                    PhD in Information Systems
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Research</h1>
+                <p class="text-xl text-indigo-200 max-w-3xl leading-relaxed">
+                    My research explores how technology shapes organizations and society—from social network dynamics to big data analytics and information systems development.
+                </p>
+            </div>
+        </section>
+
+        <!-- Research Interests -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-12">Research Interests</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl border border-blue-100">
+                        <div class="p-3 bg-blue-100 rounded-xl w-fit mb-6">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Social Network Analysis</h3>
+                        <p class="text-zinc-600">Studying innovation and information diffusion through network structures. How ideas spread and influence emerges in digital platforms.</p>
+                    </div>
+                    <div class="p-8 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl border border-emerald-100">
+                        <div class="p-3 bg-emerald-100 rounded-xl w-fit mb-6">
+                            <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Big Data Analytics</h3>
+                        <p class="text-zinc-600">Techniques for extraction, analysis, and visualization of large-scale data. Making sense of complexity through computational methods.</p>
+                    </div>
+                    <div class="p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl border border-purple-100">
+                        <div class="p-3 bg-purple-100 rounded-xl w-fit mb-6">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">IS Design & Development</h3>
+                        <p class="text-zinc-600">IT architecture, software engineering practices, and user experience. Building systems that work for people and organizations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dissertation -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-100">
+            <div class="max-w-6xl mx-auto">
+                <div class="p-8 bg-white rounded-3xl border border-zinc-200">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="p-3 bg-zinc-100 rounded-xl">
+                            <svg class="w-6 h-6 text-zinc-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="text-sm text-zinc-500 mb-1">Dissertation · 2013</div>
+                            <h3 class="text-xl font-bold">The Long-Tails in Content Services</h3>
+                        </div>
+                    </div>
+                    <p class="text-zinc-600 ml-16">How the Structure of Hybrid Networks Shape Content Popularity and Related Decision-Making</p>
+                    <p class="text-zinc-500 text-sm ml-16 mt-2">Case Western Reserve University, Weatherhead School of Management</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-12">Publications</h2>
+
+                <!-- Journal Papers -->
+                <div class="mb-16">
+                    <h3 class="text-lg font-semibold mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-blue-100 rounded-lg">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                            </svg>
+                        </span>
+                        Journal Papers
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-blue-600 font-medium mb-2">Journal of IT Standards & Standardization Research</div>
+                            <h4 class="font-bold mb-2">The Impacts of The Cascading Style Sheet Standard on Mobile Computing</h4>
+                            <p class="text-zinc-600 text-sm">Germonprez M., Avital M., Srinivasan N. (2006) · 4(2), 55-69</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-blue-600 font-medium mb-2">SSRN</div>
+                            <h4 class="font-bold mb-2">Moving Beyond 'Mickey Mouse': Kalle Lyytinen's Pioneering Research into Digital Infrastructures</h4>
+                            <p class="text-zinc-600 text-sm">Berente N., Hansen S., Srinivasan N. (2013)</p>
+                            <a href="https://ssrn.com/abstract=2450485" target="_blank" class="inline-flex items-center gap-1 text-sm text-uga-red hover:underline mt-2">
+                                View on SSRN
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Chapters -->
+                <div class="mb-16">
+                    <h3 class="text-lg font-semibold mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-emerald-100 rounded-lg">
+                            <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </span>
+                        Book Chapters
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-emerald-600 font-medium mb-2">Springer · 2013</div>
+                            <h4 class="font-bold mb-2">Tensions in the Adoption and Use of Social Media Platforms</h4>
+                            <p class="text-zinc-600 text-sm">Srinivasan N., Damsgaard J. · in Grand Successes and Failures in IT, Public and Private Sectors</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-emerald-600 font-medium mb-2">Springer · 2011</div>
+                            <h4 class="font-bold mb-2">The Adoption of Web 2.0 Platforms</h4>
+                            <p class="text-zinc-600 text-sm">Srinivasan N., Damsgaard J. · in Governance and Sustainability in Information Systems</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-emerald-600 font-medium mb-2">IGI Global · 2007</div>
+                            <h4 class="font-bold mb-2">The Value of Web Design Standards for Mobile Computing</h4>
+                            <p class="text-zinc-600 text-sm">Germonprez M., Avital M., Srinivasan N. · in Standardization Research in Information Technology</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conference Papers -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-purple-100 rounded-lg">
+                            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </span>
+                        Peer-Reviewed Conference Papers
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-purple-600 font-medium mb-2">AMCIS · 2021</div>
+                            <h4 class="font-bold mb-2">Helping Students Get their Heads in the Cloud with AWS</h4>
+                            <p class="text-zinc-600 text-sm">Piercy C., Srinivasan N. · American Conference on Information Systems</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-purple-600 font-medium mb-2">AMCIS · 2020</div>
+                            <h4 class="font-bold mb-2">Do "Digital" Firms Live Longer as Fields Converge? A Survival Analysis of the S&P 500</h4>
+                            <p class="text-zinc-600 text-sm">Berente N., Lee J., Potts A.M., Srinivasan N.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-purple-600 font-medium mb-2">HICSS · 2016</div>
+                            <h4 class="font-bold mb-2">Tweeting Like Taylor Swift? Affordances, Status Production, and Online Platforms</h4>
+                            <p class="text-zinc-600 text-sm">Seidel S., Debartoli S., Berente N., Srinivasan N. · Hawaii International Conference on System Sciences</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-purple-600 font-medium mb-2">ICIS · 2013</div>
+                            <h4 class="font-bold mb-2">Digital Traces of Information Systems: Sociomateriality made Researchable</h4>
+                            <p class="text-zinc-600 text-sm">Hedman J., Srinivasan N., Lindgren R. · International Conference on Information Systems, Milan</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-purple-600 font-medium mb-2">ICIS · 2008</div>
+                            <h4 class="font-bold mb-2">Design Principles for IT in Doubly Distributed Design Networks</h4>
+                            <p class="text-zinc-600 text-sm">Berente N., Srinivasan N., Lyytinen K., Yoo Y. · International Conference on Information Systems, Paris</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-zinc-200 publication-card">
+                            <div class="text-sm text-purple-600 font-medium mb-2">ICIS · 2007</div>
+                            <h4 class="font-bold mb-2">Binate Diversity and IT at the Rolling Edge of Design Networks</h4>
+                            <p class="text-zinc-600 text-sm">Berente N., Srinivasan N., Yoo Y., Boland R.J., Lyytinen K. · International Conference on Information Systems, Montreal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Collaborations -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-100">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-12">Research Collaborations</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-8 bg-white rounded-3xl">
+                        <div class="flex items-start justify-between mb-4">
+                            <h3 class="text-xl font-bold">DREAMS Project</h3>
+                            <span class="text-sm text-zinc-500">2009-2012</span>
+                        </div>
+                        <p class="text-zinc-600 mb-4">Studied the future of mobile services in collaboration with major industry partners.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-zinc-100 rounded-full text-sm text-zinc-600">Børsen</span>
+                            <span class="px-3 py-1 bg-zinc-100 rounded-full text-sm text-zinc-600">Danish Consumer Board</span>
+                            <span class="px-3 py-1 bg-zinc-100 rounded-full text-sm text-zinc-600">DR</span>
+                            <span class="px-3 py-1 bg-zinc-100 rounded-full text-sm text-zinc-600">Euman</span>
+                        </div>
+                    </div>
+                    <div class="p-8 bg-white rounded-3xl">
+                        <div class="flex items-start justify-between mb-4">
+                            <h3 class="text-xl font-bold">Doubly Distributed Design Project</h3>
+                            <span class="text-sm text-zinc-500">2006-2009</span>
+                        </div>
+                        <p class="text-zinc-600 mb-4">Studied advanced ICT use in the Architecture, Engineering, and Construction industry.</p>
+                        <div class="flex items-center gap-2 text-sm text-emerald-700 bg-emerald-50 px-3 py-2 rounded-lg w-fit">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            NSF Funded (SES #0621262)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-12">Academic Service</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="font-semibold mb-6 flex items-center gap-2">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                            Journal Reviewer
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-zinc-600">
+                            <div class="p-3 bg-zinc-50 rounded-lg">MIS Quarterly</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">Information Systems Journal</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">European Journal of IS</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">IEEE Systems Journal</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">Journal of AIS</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">Journal of Strategic IS</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">Electronic Markets</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">IT and People</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-6 flex items-center gap-2">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                            Conference Reviewer
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-zinc-600">
+                            <div class="p-3 bg-zinc-50 rounded-lg">ICIS</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">AMCIS</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">ECIS</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">HICSS</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">Academy of Management</div>
+                            <div class="p-3 bg-zinc-50 rounded-lg">PACIS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-900 text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Interested in Collaboration?</h2>
+                <p class="text-zinc-400 mb-8">I'm always open to research collaborations in data analytics, information systems, and related areas.</p>
+                <a href="mailto:nsrini@uga.edu" class="inline-flex items-center gap-2 bg-white text-zinc-900 px-6 py-3 rounded-full font-medium hover:bg-zinc-200 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-4 bg-zinc-950 text-zinc-500 text-center text-sm">
+        <p>&copy; 2025 Nikhil Srinivasan. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile menu script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
