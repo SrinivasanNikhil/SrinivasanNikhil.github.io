@@ -326,6 +326,48 @@ a:hover { text-decoration: underline; }
 .pub-title { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 6px; font-family: var(--font-sans); }
 .pub-authors { font-size: 13px; color: var(--muted); }
 
+/* ---- Project card ---- */
+.project-card { display: flex; flex-direction: column; }
+.project-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.project-tags { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.project-points {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.project-points li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--body);
+  padding-left: 14px;
+  position: relative;
+}
+.project-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.project-stack { margin-top: 16px; color: var(--muted); font-size: 12px; }
+.project-links {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 500;
+}
+.project-body { margin-bottom: 20px; }
+
 /* ---- Footer ---- */
 .ws-footer {
   border-top: 1px solid var(--line);
